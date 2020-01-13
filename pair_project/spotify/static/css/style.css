@@ -1,0 +1,275 @@
+body {
+    background-color: rgb(25, 25, 25);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* NAVBAR */
+
+.base-navbar {
+    background-color: rgb(10, 10, 10);
+    color: white;
+    height: 5000px;
+    padding-top: 20px;
+    position: fixed;
+    z-index: 10;
+}
+
+.base-navbar .row {
+    padding: 5px 10%;
+}
+
+#spotify_logo {
+    padding-bottom: 20px;
+    width: 75%;
+}
+
+#home_button {
+    margin-top: -10px;
+}
+
+#search_button {
+    margin-top: -10px;
+}
+
+.base-navbar a {
+    color: #dddddd;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.base-navbar a:active {
+    color: white;
+}
+
+.base-navbar a:hover {
+    color: white;
+    transition: .5s;
+}
+
+/* BOTTOM PLAYER */
+
+footer {
+    background-color: rgb(45, 45, 45);
+}
+
+.base-player {
+    margin: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.base-player .row {
+    margin: 20px 0 15px 0;
+}
+
+.base-player audio {
+    width: 100%;
+    background-color: gray;
+}
+
+.base-player-pict img {
+    height: 60px;
+    margin: -8px -15px;
+}
+
+.base-player-title {
+    color: white;
+    font-size: small;
+    margin-left: -23%;
+    display: block;
+}
+
+.base-player-artist {
+    color: rgb(150, 150, 150);
+    font-size: small;
+    margin-left: -23%;
+    padding-top: -5px;
+}
+
+/* ALBUM */
+
+.album-image {
+    padding: 30px;
+}
+
+.album-image img {
+    width: 100%;
+}
+
+.album-name h3 {
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.album-name span {
+    color: rgb(100, 100, 100);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.song-list {
+    padding: 30px;
+}
+
+.song-row {
+    background-color: rgb(50, 50, 50);
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: -40px;
+    margin-bottom: 10px;
+}
+
+.song-row-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: -40px;
+    margin-bottom: 10px;
+    transition: .5s;
+}
+
+.song-row-2:hover {
+    background-color: rgb(50, 50, 50);
+    transition: .5s;
+}
+
+.song-title {
+    color: rgb(80, 220, 80);
+    padding: 10px;
+}
+
+.song-title-2 {
+    color: white;
+    padding: 10px;
+}
+
+.song-title a {
+    color: rgb(80, 220, 80);
+    text-decoration: none;
+}
+
+.song-title-2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.song-title-right {
+    margin-right: auto;
+}
+
+.song-desc {
+    color: rgb(150, 150, 150);
+    padding: 0 10px 10px 10px;
+}
+
+/* HOME */
+
+.home-nav {
+    background-color:black;
+}
+
+.home-margin-isi {
+    margin-right:40px;
+    background-color: #1e2224;
+}
+
+.home-judul-category {
+    margin-top:30px;
+    margin-bottom:20px;
+    color:white;
+}
+
+.home-judul-genre {
+    color:white;
+    font-size:18px;
+}
+
+.home-judul-genre:hover {
+    text-decoration:underline;
+    text-decoration-color: white;
+}
+
+.home-cover-album {
+    width:160px;
+    height:160px;
+    margin-bottom: 15px;
+}
+
+.home-border-album {
+    padding: 20px 30px;
+    height:300px;
+    box-sizing: border-box;
+    background-color: #353b3d;
+    border-radius: 8px;
+    position:relative;
+}
+
+.home-play-button {
+    position: absolute;
+    width:40px;
+    height:40px;
+    right:15px;
+    top:260px;
+    opacity:0;
+}
+
+.home-play-button:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
+}
+
+.home-border-album:hover .home-play-button {
+    position: absolute;
+    width:42px;
+    height:42px;
+    right:19px;
+    top:240px;
+    opacity:1;
+}
+
+.home-deskripsi-album {
+    color: #b9c7c9;
+    font-size: 14px;
+}
+
+/* search.html */
+.search-border-genre {
+    width: 230px;
+    height:230px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+.search-judul-genre {
+    color:white;
+}
+
+.search-bar {
+    margin-top:20px;
+    margin-left: 100px;;
+    border-radius: 50px;
+    text-align:center;
+    width:400px;
+    height:43px;
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}

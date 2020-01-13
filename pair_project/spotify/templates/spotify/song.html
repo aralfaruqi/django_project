@@ -1,0 +1,56 @@
+{% extends './base.html' %}
+
+{% block title %}
+    Spotify &ndash; {{ album.album }}
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="col-2"></div>
+<!-- LEFT COLUMN -- ALBUM DATA -->
+<div class="col-3 album-name">
+    <div class="row album-image">
+        <img src="{{ album.image }}" alt="">
+    </div>
+    <div class="row">
+        <h3>{{ album.album }}</h3>
+    </div>
+    <div class="row">
+        <span>Spotify</span>
+    </div>
+</div>
+<!-- RIGHT COLUMN -- SONGS -->
+<div class="col-7 song-list">
+{% for sing in songs %}
+    {% if sing.id == song.id %}
+        <div class="row song-row">
+            <div class="col-12">
+            <div class="row song-title">
+                <span class="song-title-right">
+                    <a href="{% url 'song' album.id sing.id %}">{{ sing.title }}</a>
+                </span>
+                <span>{{ sing.minutes }}</span>
+            </div>
+            <div class="row song-desc">
+                    {{ sing.artist }} &middot; {{ album.album }}
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="row song-row-2">
+            <div class="col-12">
+            <div class="row song-title-2">
+                <span class="song-title-right">
+                    <a href="{% url 'song' album.id sing.id %}">{{ sing.title }}</a>
+                </span>
+                <span>{{ sing.minutes }}</span>
+            </div>
+            <div class="row song-desc">
+                    {{ sing.artist }} &middot; {{ album.album }}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends './base.html' %}
+
+{% block title %}
+    Spotify &ndash; Home
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 home-nav"></div>
+        <div class="col-10">
+            <div class="row container-fluid home-margin-isi">
+            {% for genre in genres %}
+                <div class="col-12">
+                    <h3 class="home-judul-category"><b>{{genre.genre}}</b></h3>
+                </div>
+                {% for album in albums %}
+                {% if album.genre_id_id == genre.id %}
+                <div class="col-3">
+                    <a href="{% url 'album' album.id %}" style="text-decoration: none;"><div class="home-border-album">
+                        <img class="home-cover-album" src="{{ album.image }}">
+                        <img class="home-play-button" src="../../static/images/base/play.png">
+                        <a href="{% url 'album' album.id %}"><h4 class="home-judul-genre"><b>{{ album.album }}</b></h4></a>
+                        <p class="home-deskripsi-album">{{ album.deskripsi }}</p>
+                    </div></a>
+                </div>
+                {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
